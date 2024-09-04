@@ -45,6 +45,6 @@ public class Triangle : IShape
     {
 		//из-за вероятности возникновения погрешности при вычислениях 
 		//производится сравнение результата разности не с нулем, а с небольшим числом 
-		return Math.Abs(Math.Pow(SideC, 2) - (Math.Pow(SideA, 2) + Math.Pow(SideB, 2))) <= double.Epsilon * 100;
+		return Math.Abs(Math.Pow(SideC, 2) - (Math.Pow(SideA, 2) + Math.Pow(SideB, 2))) <= 1d / 100000000000d;
     }
 }
