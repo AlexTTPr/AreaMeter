@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AreaMeter.Shapes;
-//данный интерфейс может быть расширен пользователем для добавления новых методов/свойств
+//данный интерфейс может быть расширен пользователем библиотеки для добавления новых методов/свойств
 public interface IShape
 {
 	double Area { get; }

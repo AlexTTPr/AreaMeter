@@ -9,6 +9,7 @@ internal class Program
 		CustomShapeExample();
 	}
 
+	//Расчитывание площади стандартных фигур
 	static void RegularShapesExample()
 	{
 		var circle = new Circle(10);
@@ -18,6 +19,7 @@ internal class Program
 		Console.WriteLine($"Площадь треугольника: {triangle.Area}");
     }
 
+	//Создание новой фигуры и расчет ее площади
 	static void CustomShapeExample()
 	{
 		var square = new Square(10);
@@ -25,7 +27,7 @@ internal class Program
     }
 }
 
-
+//Кастомная фигура
 public class Square : IShape
 {
 	public double Side { get; }
