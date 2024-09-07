@@ -7,6 +7,7 @@ internal class Program
 	{
 		RegularShapesExample();
 		CustomShapeExample();
+		RuntimeAreaCalculation();
 	}
 
 	//Расчитывание площади стандартных фигур
@@ -24,6 +25,20 @@ internal class Program
 	{
 		var square = new Square(10);
         Console.WriteLine($"Площадь квадрата: {square.Area}");
+    }
+
+	//Случайный выбор фигуры и вычисление ее площади в рантайме
+	static void RuntimeAreaCalculation()
+	{
+		IShape unknownShape = Random.Shared.Next(0, 3) switch
+		{
+			0 => new Circle(5),
+			1 => new Triangle(3, 4, 5),
+			2 => new Square(5),
+			_ => new Circle(10)
+		};
+
+        Console.WriteLine($"Площадь {unknownShape} = {unknownShape.Area}");
     }
 }
 
